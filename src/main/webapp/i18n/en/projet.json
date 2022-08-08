@@ -1,0 +1,25 @@
+{
+  "papApp": {
+    "projet": {
+      "home": {
+        "title": "Projets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Projet",
+        "createOrEditLabel": "Create or edit a Projet",
+        "notFound": "No Projets found"
+      },
+      "created": "A new Projet is created with identifier {{ param }}",
+      "updated": "A Projet is updated with identifier {{ param }}",
+      "deleted": "A Projet is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Projet {{ id }}?"
+      },
+      "detail": {
+        "title": "Projet"
+      },
+      "id": "ID",
+      "titreprojet": "Titreprojet",
+      "nomprojet": "Nomprojet"
+    }
+  }
+}
