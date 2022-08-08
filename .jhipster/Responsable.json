@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220808142714",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "responsable",
+  "fields": [
+    {
+      "fieldName": "nommanager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomteamlead",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Responsable",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "entretien",
+      "otherEntityRelationshipName": "responsable",
+      "relationshipName": "entretien",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
