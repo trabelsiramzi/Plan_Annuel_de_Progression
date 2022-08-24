@@ -40,22 +40,26 @@ entity Entretien {
     confirmationsalarie String
 }
 
-entity Responsable {
-	 nommanager String,
-     nomteamlead String
+entity Competance {
+	nomCompetance String,
+    description String,
+    niveau Integer
 }
-
+relationship ManyToMany {
+	Employee to Affectation,
+    Employee to Competance
+    }
 relationship OneToMany {
-	Employee{nomprojet} to Affectation,
-    Responsable to Entretien
+    Employee to Entretien
+    Projet to Affectation
+
 }
 
-relationship OneToOne {
-	Projet{nomprojet} to Affectation
-}
+
 
 relationship ManyToOne {
-     Employee{Manager} to Employee
+     Employee{Manager} to Employee,
+     Employee{Teamlead} to Employee
 }
 
 // defining multiple OneToMany relationships with comments
