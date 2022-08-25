@@ -24,11 +24,6 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'papApp.entretien.home.title' },
         loadChildren: () => import('./entretien/entretien.module').then(m => m.EntretienModule),
       },
-      {
-        path: 'responsable',
-        data: { pageTitle: 'papApp.responsable.home.title' },
-        loadChildren: () => import('./responsable/responsable.module').then(m => m.ResponsableModule),
-      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],
