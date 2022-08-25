@@ -12,8 +12,20 @@
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     
+    <include file="config/liquibase/changelog/20220825123827_added_entity_Affectation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123828_added_entity_Etablissement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123829_added_entity_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123830_added_entity_Projet.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123831_added_entity_Entretien.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123832_added_entity_AffectationAdmin.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123833_added_entity_Competance.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
    
+    <include file="config/liquibase/changelog/20220825123827_added_entity_constraints_Affectation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123828_added_entity_constraints_Etablissement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123829_added_entity_constraints_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123831_added_entity_constraints_Entretien.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220825123833_added_entity_constraints_Competance.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,28 @@
+{
+  "papApp": {
+    "entretien": {
+      "home": {
+        "title": "Entretiens",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Entretien",
+        "createOrEditLabel": "Créer ou éditer un Entretien",
+        "notFound": "Aucun Entretien trouvé"
+      },
+      "created": "Un nouveau Entretien a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Entretien avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Entretien avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Entretien {{ id }} ?"
+      },
+      "detail": {
+        "title": "Entretien"
+      },
+      "id": "ID",
+      "dateentretient": "Dateentretient",
+      "resultat": "Resultat",
+      "confirmationresponsable": "Confirmationresponsable",
+      "confirmationsalarie": "Confirmationsalarie",
+      "employee": "Employee"
+    }
+  }
+}

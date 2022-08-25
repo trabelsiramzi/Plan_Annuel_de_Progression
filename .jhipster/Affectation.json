@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825123827",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "affectation",
+  "fields": [
+    {
+      "fieldName": "nomprojet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datedebut",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "datefin",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Task entity.\\n@author The JHipster team.",
+  "jpaMetamodelFiltering": false,
+  "name": "Affectation",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "projet",
+      "otherEntityRelationshipName": "affectation",
+      "relationshipName": "projet",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "affectation",
+      "relationshipName": "employee",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "competance",
+      "otherEntityRelationshipName": "affectation",
+      "relationshipName": "competance",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
