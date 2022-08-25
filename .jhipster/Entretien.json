@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825125342",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "entretien",
+  "fields": [
+    {
+      "fieldName": "dateentretient",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "resultat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmationresponsable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "confirmationsalarie",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Entretien",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "entretien",
+      "relationshipName": "employee",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

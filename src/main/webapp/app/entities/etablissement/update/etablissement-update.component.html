@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-etablissement-heading"
+        data-cy="EtablissementCreateUpdateHeading"
+        jhiTranslate="papApp.etablissement.home.createOrEditLabel"
+      >
+        Créer ou éditer un Etablissement
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.etablissement.nometablissement" for="field_nometablissement"
+            >Nometablissement</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nometablissement"
+            id="field_nometablissement"
+            data-cy="nometablissement"
+            formControlName="nometablissement"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.etablissement.manager" for="field_manager">Manager</label>
+          <input type="number" class="form-control" name="manager" id="field_manager" data-cy="manager" formControlName="manager" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.etablissement.teamlead" for="field_teamlead">Teamlead</label>
+          <input type="number" class="form-control" name="teamlead" id="field_teamlead" data-cy="teamlead" formControlName="teamlead" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.etablissement.affectationAdmin" for="field_affectationAdmin"
+            >Affectation Admin</label
+          >
+          <select
+            class="form-control"
+            id="field_affectationAdmin"
+            data-cy="affectationAdmin"
+            name="affectationAdmin"
+            formControlName="affectationAdmin"
+            [compareWith]="compareAffectationAdmin"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="affectationAdminOption" *ngFor="let affectationAdminOption of affectationAdminsSharedCollection">
+              {{ affectationAdminOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
