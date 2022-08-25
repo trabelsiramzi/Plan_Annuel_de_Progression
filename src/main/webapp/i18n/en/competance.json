@@ -1,0 +1,27 @@
+{
+  "papApp": {
+    "competance": {
+      "home": {
+        "title": "Competances",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Competance",
+        "createOrEditLabel": "Create or edit a Competance",
+        "notFound": "No Competances found"
+      },
+      "created": "A new Competance is created with identifier {{ param }}",
+      "updated": "A Competance is updated with identifier {{ param }}",
+      "deleted": "A Competance is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Competance {{ id }}?"
+      },
+      "detail": {
+        "title": "Competance"
+      },
+      "id": "ID",
+      "nomCompetance": "Nom Competance",
+      "description": "Description",
+      "niveau": "Niveau",
+      "employee": "Employee"
+    }
+  }
+}

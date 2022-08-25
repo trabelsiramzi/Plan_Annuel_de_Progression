@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825015341",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "competance",
+  "fields": [
+    {
+      "fieldName": "nomCompetance",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "niveau",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Competance",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "competance",
+      "ownerSide": false,
+      "relationshipName": "employee",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

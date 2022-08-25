@@ -1,0 +1,27 @@
+{
+  "papApp": {
+    "competance": {
+      "home": {
+        "title": "Competances",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Competance",
+        "createOrEditLabel": "Créer ou éditer un Competance",
+        "notFound": "Aucun Competance trouvé"
+      },
+      "created": "Un nouveau Competance a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Competance avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Competance avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Competance {{ id }} ?"
+      },
+      "detail": {
+        "title": "Competance"
+      },
+      "id": "ID",
+      "nomCompetance": "Nom Competance",
+      "description": "Description",
+      "niveau": "Niveau",
+      "employee": "Employee"
+    }
+  }
+}

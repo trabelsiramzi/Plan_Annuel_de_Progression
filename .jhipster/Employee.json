@@ -1,0 +1,69 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825015338",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "employee",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "javadoc": "The firstname attribute."
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numtel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateembauche",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "The Employee entity.",
+  "jpaMetamodelFiltering": false,
+  "name": "Employee",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "entretien",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "entretien",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "employee",
+      "relationshipName": "manager",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "employee",
+      "relationshipName": "teamlead",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "affectation",
+      "otherEntityRelationshipName": "employee",
+      "ownerSide": true,
+      "relationshipName": "affectation",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "competance",
+      "otherEntityRelationshipName": "employee",
+      "ownerSide": true,
+      "relationshipName": "competance",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}
