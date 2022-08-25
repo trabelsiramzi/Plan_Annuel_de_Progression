@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825120934",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "affectation_admin",
+  "fields": [
+    {
+      "fieldName": "datedebut",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "datefin",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AffectationAdmin",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "etablissement",
+      "otherEntityRelationshipName": "manager",
+      "relationshipName": "manager",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "etablissement",
+      "otherEntityRelationshipName": "teamlead",
+      "relationshipName": "teamlead",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "affectationAdmin",
+      "relationshipName": "employee",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

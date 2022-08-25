@@ -1,0 +1,63 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825120931",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "employee",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "javadoc": "The firstname attribute."
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numtel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateembauche",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "The Employee entity.",
+  "jpaMetamodelFiltering": false,
+  "name": "Employee",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "entretien",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "entretien",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "affectation",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "affectation",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "etablissement",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "etablissement",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "affectationAdmin",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "affectationAdmin",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

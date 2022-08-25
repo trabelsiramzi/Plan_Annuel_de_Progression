@@ -1,0 +1,28 @@
+{
+  "papApp": {
+    "affectationAdmin": {
+      "home": {
+        "title": "Affectation Admins",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Affectation Admin",
+        "createOrEditLabel": "Create or edit a Affectation Admin",
+        "notFound": "No Affectation Admins found"
+      },
+      "created": "A new Affectation Admin is created with identifier {{ param }}",
+      "updated": "A Affectation Admin is updated with identifier {{ param }}",
+      "deleted": "A Affectation Admin is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Affectation Admin {{ id }}?"
+      },
+      "detail": {
+        "title": "Affectation Admin"
+      },
+      "id": "ID",
+      "datedebut": "Datedebut",
+      "datefin": "Datefin",
+      "manager": "Manager",
+      "teamlead": "Teamlead",
+      "employee": "Employee"
+    }
+  }
+}

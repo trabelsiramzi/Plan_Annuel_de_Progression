@@ -1,0 +1,80 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-competance-heading" data-cy="CompetanceCreateUpdateHeading" jhiTranslate="papApp.competance.home.createOrEditLabel">
+        Créer ou éditer un Competance
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.competance.nomCompetance" for="field_nomCompetance">Nom Competance</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nomCompetance"
+            id="field_nomCompetance"
+            data-cy="nomCompetance"
+            formControlName="nomCompetance"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.competance.description" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.competance.niveau" for="field_niveau">Niveau</label>
+          <input type="number" class="form-control" name="niveau" id="field_niveau" data-cy="niveau" formControlName="niveau" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="papApp.competance.affectation" for="field_affectation">Affectation</label>
+          <select
+            class="form-control"
+            id="field_affectation"
+            data-cy="affectation"
+            name="affectation"
+            formControlName="affectation"
+            [compareWith]="compareAffectation"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="affectationOption" *ngFor="let affectationOption of affectationsSharedCollection">
+              {{ affectationOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
