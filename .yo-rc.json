@@ -19,7 +19,6 @@
     "enableHibernateCache": true,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
-    "entities": ["Affectation", "Employee", "Projet", "Entretien", "Responsable"],
     "entitySuffix": "",
     "gitCompany": "",
     "jhiPrefix": "jhi",
