@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220825142534",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "etablissement",
+  "fields": [
+    {
+      "fieldName": "nometablissement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "manager",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "teamlead",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Etablissement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "affectationAdmin",
+      "otherEntityRelationshipName": "etablissement",
+      "relationshipName": "affectationAdmin",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
