@@ -14,6 +14,11 @@ entity Affectation {
     datedebut Instant,
     datefin Instant
 }
+entity Etablissement{
+	nometablissement String,
+    manager Long,
+    teamlead Long
+}
 
 /**
  * The Employee entity.
@@ -39,23 +44,27 @@ entity Entretien {
     confirmationresponsable String,
     confirmationsalarie String
 }
-
-entity Responsable {
-	 nommanager String,
-     nomteamlead String
+entity AffectationAdmin{
+     datedebut Instant,
+     datefin Instant
 }
-
+entity Competance {
+	nomCompetance String,
+    description String,
+    niveau Integer
+}
+relationship ManyToOne {
+	Employee to Affectation,
+    Competance to Affectation
+    }
 relationship OneToMany {
-	Employee{nomprojet} to Affectation,
-    Responsable to Entretien
-}
-
-relationship OneToOne {
-	Projet{nomprojet} to Affectation
+    Employee to Entretien,
+    Projet to Affectation,
+    Etablissement to AffectationAdmin
 }
 
 relationship ManyToOne {
-     Employee{Manager} to Employee
+     Employee to AffectationAdmin
 }
 
 // defining multiple OneToMany relationships with comments
